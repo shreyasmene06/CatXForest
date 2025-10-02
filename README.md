@@ -175,7 +175,7 @@ The system uses a **Stacking Classifier** that combines:
 ### One-Command Setup
 
 ```bash
-git clone https://github.com/yourusername/CatXForest.git
+git clone https://github.com/shreyasmene06/CatXForest.git
 cd CatXForest
 pip install -r requirements.txt
 python app.py
@@ -190,7 +190,7 @@ Visit `http://localhost:5000` in your browser.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/CatXForest.git
+git clone https://github.com/shreyasmene06/CatXForest.git
 cd CatXForest
 ```
 
@@ -520,7 +520,7 @@ We welcome contributions! Here's how you can help:
 
 ### Reporting Bugs
 
-1. Check existing [Issues](https://github.com/yourusername/CatXForest/issues)
+1. Check existing [Issues](https://github.com/shreyasmene06/CatXForest/issues)
 2. Create a new issue with:
    - Clear title and description
    - Steps to reproduce
@@ -545,7 +545,7 @@ We welcome contributions! Here's how you can help:
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/CatXForest.git
+git clone https://github.com/shreyasmene06/CatXForest.git
 
 # Create virtual environment
 python -m venv venv
@@ -634,9 +634,9 @@ copies of the Software...
 ## 📞 Support
 
 ### Documentation
-- 📖 [Full Documentation](https://github.com/yourusername/CatXForest/wiki)
-- 💬 [Discussions](https://github.com/yourusername/CatXForest/discussions)
-- 🐛 [Issue Tracker](https://github.com/yourusername/CatXForest/issues)
+- 📖 [Full Documentation](https://github.com/shreyasmene06/CatXForest/wiki)
+- 💬 [Discussions](https://github.com/shreyasmene06/CatXForest/discussions)
+- 🐛 [Issue Tracker](https://github.com/shreyasmene06/CatXForest/issues)
 
 ### Contact
 - **Author**: Shreyas Mene
@@ -674,7 +674,7 @@ copies of the Software...
 
 ### ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/CatXForest&type=Date)](https://star-history.com/#yourusername/CatXForest&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=shreyasmene06/CatXForest&type=Date)](https://star-history.com/#shreyasmene06/CatXForest&Date)
 
 ---
 
