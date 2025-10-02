@@ -1,4 +1,4 @@
-<img width="1346" height="612" alt="image" src="https://github.com/user-attachments/assets/79bdf0a6-2859-4d86-9820-29048eb9a8bd" /># 🎓 CatXForest - Student Career Recommendation System
+# 🎓 CatXForest - Student Career Recommendation System
 
 <div align="center">
 
