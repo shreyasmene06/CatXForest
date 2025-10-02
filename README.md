@@ -640,8 +640,8 @@ copies of the Software...
 
 ### Contact
 - **Author**: Shreyas Mene
-- **Email**: your-email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Email**: shreyasmene6@gmail.com
+- **GitHub**: [@shreyasmene06](https://github.com/shreyasmene06)
 
 ### Community
 - ⭐ Star this repo if you find it helpful!
@@ -680,7 +680,7 @@ copies of the Software...
 
 **Made with ❤️ for Students by Students**
 
-[Report Bug](https://github.com/yourusername/CatXForest/issues) • [Request Feature](https://github.com/yourusername/CatXForest/issues) • [Documentation](https://github.com/yourusername/CatXForest/wiki)
+[Report Bug](https://github.com/shreyasmene06/CatXForest/issues) • [Request Feature](https://github.com/shreyasmene06/CatXForest/issues) • [Documentation](https://github.com/shreyasmene06/CatXForest/wiki)
 
 </div>
 
