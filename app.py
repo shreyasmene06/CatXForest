@@ -42,7 +42,7 @@ def Recommendations(gender, part_time_job, absence_days, extracurricular_activit
     probabilities = model.predict_proba(scaled_features)
 
     # Get top five predicted classes along with their probabilities
-    top_classes_idx = np.argsort(-probabilities[0])[:3]
+    top_classes_idx = np.argsort(-probabilities[0])[:5]
     top_classes_names_probs = [(class_names[idx], probabilities[0][idx]) for idx in top_classes_idx]
 
     return top_classes_names_probs
@@ -79,9 +79,16 @@ def pred():
                                           chemistry_score, biology_score, english_score, geography_score,
                                           total_score, average_score)
 
-        return render_template('results.html', recommendations=recommendations)
+        # Prepare data for pie chart
+        career_labels = [rec[0] for rec in recommendations]
+        probabilities = [float(rec[1]) * 100 for rec in recommendations]  # Convert to percentage
+        
+        return render_template('results.html', 
+                             recommendations=recommendations,
+                             career_labels=career_labels,
+                             probabilities=probabilities)
     return render_template('home.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=5000)
