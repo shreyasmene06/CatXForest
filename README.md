@@ -1,4 +1,4 @@
-# 🎓 CatXForest - Student Career Recommendation System
+<img width="1346" height="612" alt="image" src="https://github.com/user-attachments/assets/79bdf0a6-2859-4d86-9820-29048eb9a8bd" /># 🎓 CatXForest - Student Career Recommendation System
 
 <div align="center">
 
@@ -37,6 +37,8 @@
 ---
 
 ## 🌟 Overview
+
+Live at: [catxforest.onrender.com](https://catxforest.onrender.com/)
 
 **CatXForest** is a machine learning-powered web application that provides personalized career recommendations for students. By analyzing academic scores across multiple subjects, extracurricular activities, and other key attributes, the system predicts the top 5 most suitable career paths with confidence probabilities.
 
