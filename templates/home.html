@@ -1,163 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Recommendation System</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatXForest | Career Intelligence</title>
 
-        .mynav {
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        .mynav h1 {
-            margin: 0;
-            font-weight: 700;
-            font-size: 2.2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            margin-top: 120px;
-            border-radius: 25px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.95);
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            animation: slideUp 1s ease-out;
-        }
+    body {
+      background: #020617;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
 
-        .bg-image {
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            background-attachment: fixed;
-            transition: background-image 3s ease-in-out;
-            position: relative;
-        }
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 18px 40px;
+      background: rgba(2, 6, 23, 0.7);
+      backdrop-filter: blur(14px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
 
-        .bg-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            pointer-events: none;
-        }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-        .container h1 {
-            color: #333;
-            font-weight: 700;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
+    .logo span {
+      color: #3b82f6;
+    }
 
-        .container p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #111827, #020617);
+      position: relative;
+    }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/static/img.png") center/cover no-repeat;
+      opacity: 0.07;
+      animation: bgFade 12s infinite alternate;
+    }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        }
+    @keyframes bgFade {
+      from { opacity: 0.05; }
+      to { opacity: 0.12; }
+    }
 
-        .feature-icon {
-            font-size: 3rem;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
+    .hero-content {
+      position: relative;
+      max-width: 850px;
+      animation: fadeUp 1s ease;
+    }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
+    .hero h1 span {
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
+    .hero p {
+      font-size: 1.15rem;
+      color: #9ca3af;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    /* ===== BUTTON ===== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 38px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: white;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 15px 40px rgba(59,130,246,0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 25px 60px rgba(59,130,246,0.6);
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      margin-top: 70px;
+    }
+
+    .feature-card {
+      background: linear-gradient(180deg, #0b1220, #020617);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card i {
+      font-size: 2.2rem;
+      color: #3b82f6;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg-image" id="bgImage">
-        <div class="mynav">
-            <h1 class="text-center">
-                <i class="fas fa-graduation-cap"></i> Career Recommendation System
-            </h1>
+
+  <!-- NAV -->
+  <div class="navbar">
+    <div class="logo">Cat<span>X</span>Forest</div>
+    <div>AI Career Advisor</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Careers That <span>Actually Fit You</span></h1>
+      <p>
+        CatXForest uses machine learning to analyze your academic strengths,
+        interests, and personality traits — helping you discover career paths
+        aligned with who you really are.
+      </p>
+
+      <a href="/recommend" class="cta-btn">
+        <i class="fas fa-compass"></i>
+        Start Career Analysis
+      </a>
+
+      <div class="features">
+        <div class="feature-card">
+          <i class="fas fa-brain"></i>
+          <h3>AI-Driven Insights</h3>
+          <p>Predictions powered by trained machine learning models.</p>
         </div>
 
-        <div class="container">
-            <div class="float-animation">
-                <i class="fas fa-chart-line feature-icon"></i>
-            </div>
-            <h1>Discover Your Perfect Career Path</h1>
-            <p>Our advanced AI-powered recommendation system analyzes your academic performance, interests, and personal attributes to suggest the most suitable career paths tailored just for you.</p>
-            <p>✨ Get personalized recommendations based on your unique profile</p>
-            <p>📊 View detailed analytics and probability scores</p>
-            <p>🎯 Explore top 5 career matches with interactive visualizations</p>
-            <a href="/recommend" class="btn btn-primary">
-                <i class="fas fa-rocket"></i> Start My Journey
-            </a>
+        <div class="feature-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Visual Results</h3>
+          <p>Career probabilities shown using charts and cards.</p>
         </div>
+
+        <div class="feature-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Top Career Matches</h3>
+          <p>Explore the top 5 career paths tailored to you.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-        const images = ["static/img.png", "static/img_1.png", "static/img_2.png"]; // Update image paths
-        let currentIndex = 0;
+  <div class="footer">
+    Built by <b>Anurag Yadav</b> · Career Recommendation System
+  </div>
 
-        function changeBackground() {
-            document.getElementById('bgImage').style.backgroundImage = `url('${images[currentIndex]}')`;
-            currentIndex = (currentIndex + 1) % images.length;
-            setTimeout(changeBackground, 4000); // Change every 2 seconds
-        }
-
-        changeBackground();
-    </script>
 </body>
 </html>
