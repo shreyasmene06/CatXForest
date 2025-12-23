@@ -120,8 +120,8 @@
 
   <h1>Cat<span>X</span>Forest</h1>
   <p style="text-align:center; max-width:700px; margin:auto;">
-    A modern, AI-powered career recommendation system with a redesigned frontend
-    focused on clarity, usability, and visual understanding.
+    An AI-powered career recommendation system with a redesigned frontend,
+    focused on clarity, usability, and intuitive data visualization.
   </p>
 
   <div class="badge-row">
@@ -132,41 +132,44 @@
     <span class="badge">Chart.js</span>
   </div>
 
-  <h2>📌 About This Version</h2>
+  <h2>📌 About This Repository</h2>
   <p>
     This repository is a <b>frontend-focused fork</b> of the original CatXForest group project.
-    The backend logic and machine learning model were developed collaboratively,
-    while this version highlights my individual contribution in frontend design and user experience.
+    The machine learning models and core backend logic were developed collaboratively as part
+    of a team project, while this fork represents my <b>independent work on frontend design,
+    user experience, and visualization</b>.
   </p>
 
   <div class="highlight">
     <ul>
-      <li>Modern dark theme UI</li>
-      <li>Career-mentor style layout</li>
-      <li>Structured input flow</li>
-      <li>Career cards with confidence visualization</li>
-      <li>Improved readability and navigation</li>
+      <li>Modern dark-themed user interface</li>
+      <li>Clear, step-by-step input flow</li>
+      <li>Career cards with confidence percentages</li>
+      <li>Interactive charts for result interpretation</li>
+      <li>Improved layout consistency and readability</li>
     </ul>
   </div>
 
   <h2>🖥️ Tech Stack</h2>
   <ul>
     <li><b>Frontend:</b> HTML5, CSS3, JavaScript, Chart.js</li>
-    <li><b>Backend:</b> Flask (unchanged)</li>
-    <li><b>Machine Learning:</b> Random Forest, XGBoost, CatBoost (Ensemble)</li>
+    <li><b>Backend:</b> Flask (Python)</li>
+    <li><b>Machine Learning:</b> Ensemble models (Random Forest, XGBoost, CatBoost)</li>
   </ul>
 
   <h2>🚀 Application Flow</h2>
   <ul>
     <li>Landing page introducing the AI career advisor</li>
-    <li>Structured form for academic and personal inputs</li>
-    <li>Results page with career cards and probability charts</li>
+    <li>Structured form for academic and personal details</li>
+    <li>Results page with ranked career recommendations and probability charts</li>
   </ul>
 
   <h2>⚙️ Run Locally</h2>
   <div class="code">
     git clone https://github.com/anuragyadav0311/CatXForest.git<br>
     cd CatXForest<br>
+    python -m venv venv<br>
+    venv\Scripts\activate<br>
     pip install -r requirements.txt<br>
     python app.py
   </div>
@@ -174,20 +177,20 @@
   <h2>🧑‍💻 My Contribution</h2>
   <p>
     <b>Anurag Yadav</b><br>
-    Frontend Design & UX · UI Architecture · Visualization · Deployment
+    Frontend Design & UX · UI Architecture · Chart Integration · Full-Stack Debugging
   </p>
 
   <h2>🤝 Credits</h2>
   <ul>
-    <li>Original ML Architecture: Shreyas Mene</li>
-    <li>Dataset: Kaggle (Student Studies Recommendation)</li>
+    <li>Original ML Architecture & Training: Shreyas Mene</li>
+    <li>Dataset: Kaggle — Student Studies Recommendation</li>
     <li>Libraries: Flask, scikit-learn, Chart.js</li>
   </ul>
 
   <h2>📜 License</h2>
   <p>
     MIT License<br>
-    Original work © 2025 Shreyas Mene<br>
+    Original project © 2025 Shreyas Mene<br>
     Frontend modifications © 2025 Anurag Yadav
   </p>
 
