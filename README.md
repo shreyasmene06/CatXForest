@@ -94,15 +94,7 @@ HTML5, CSS3, JavaScript (Chart.js for visualizations)
 
 ## Model Architecture
 
-### Training Pipeline
-
-```
-Data Collection → Preprocessing → Feature Engineering → SMOTE Balancing → 
-Model Training → Ensemble Creation → Evaluation → Deployment
-```
-
 ### Hybrid Ensemble Model
-
 The system uses a **Stacking Classifier** that combines:
 
 **Base Models**:
@@ -133,7 +125,6 @@ The system uses a **Stacking Classifier** that combines:
 ## Quick Start
 
 ### Prerequisites
-
 - Python 3.9 or higher
 - pip package manager
 - Git
@@ -231,7 +222,9 @@ After training, the following files are created:
 
 ## Usage
 
-### Running Locally
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
 
 **Start the application**:
 ```bash
@@ -516,7 +509,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ```
 MIT License
 
-Copyright (c) 2025 Shreyas Mene
+Copyright (c) 2025 CatXForest Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
